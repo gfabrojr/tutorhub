@@ -11,13 +11,6 @@ You need Node.js (18 or newer) and MySQL (MySQL Community Server, or XAMPP with 
 
 On the first run the server creates the `tutorhub` database and tables (from `database/schema.sql`) and adds the demo accounts. You can also run `database/schema.sql` yourself in MySQL Workbench.
 
-## Demo accounts
-| Role | Email | Password |
-|---|---|---|
-| Student | student@demo.com | student123 |
-| Tutor | maria@demo.com / john@demo.com | tutor123 |
-| Admin | admin@demo.com | admin123 |
-
 The same demo logins are listed on the home page (`frontend/index.html`). If you change a demo password, update that list too. New registrations are students. Admins add tutors and set each tutor's password when creating the account.
 
 ## Booking rules (checked by the server)

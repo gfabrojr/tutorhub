@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tutors | TutorHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="stylesheet" href="css/student.css" />
+  </head>
+  <body>
+    <script src="js/theme.js"></script>
+    <nav id="nav"></nav>
+    <main class="wrap">
+      <header class="pagehead">
+        <h1 id="pageTitle">Tutors</h1>
+        <p id="pageSub" hidden></p>
+      </header>
+      <div id="msg" class="msg"></div>
+      <form id="tutorForm" class="box" hidden novalidate>
+        <h2>Add or edit tutor</h2>
+        <label>Full name</label>
+        <input name="tname" />
+        <label>Email</label>
+        <input name="email" />
+        <label>Password</label>
+        <input name="password" type="password" autocomplete="new-password" />
+        <label>Subjects (comma separated)</label>
+        <input name="subjects" />
+        <label>Hourly rate (₱)</label>
+        <input name="rate" type="number" min="0" />
+        <button class="btn">Save tutor</button>
+      </form>
+      <div class="filters">
+        <input id="search" placeholder="Search by name, subject, or specialization" />
+      </div>
+      <div class="grid" id="tutorList"></div>
+      <form id="bookForm" class="box" hidden novalidate>
+        <h2 id="bookTitle"></h2>
+        <p id="schedInfo" class="sd-hint"></p>
+        <label>Subject</label>
+        <select name="subject" id="subject"></select>
+        <label>Date</label>
+        <input type="date" name="date" id="date" />
+        <label>Start time (each session is 1 hour)</label>
+        <select name="time" id="time"></select>
+        <p id="timeNote" class="sd-hint"></p>
+        <label>Learning mode</label>
+        <select name="mode">
+          <option value="">Choose...</option>
+          <option>Online</option>
+          <option>Face-to-face</option>
+        </select>
+        <label>Notes (optional)</label>
+        <textarea name="notes" rows="2"></textarea>
+        <button class="btn">Request appointment</button>
+      </form>
+    </main>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/tutors.js"></script>
+  </body>
+</html>

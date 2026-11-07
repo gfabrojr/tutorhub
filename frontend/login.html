@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Login | TutorHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="stylesheet" href="css/student.css" />
+  </head>
+  <body data-public>
+    <script src="js/theme.js"></script>
+    <nav id="nav"></nav>
+    <main class="wrap auth">
+      <aside class="auth-side">
+        <h2>Welcome back</h2>
+        <p>Log in to see your appointments, book a tutor, and keep track of your sessions.</p>
+          <div class="auth-faces" aria-hidden="true">
+            <span class="sd-av pink round"></span>
+            <span class="sd-av yellow square"></span>
+            <span class="sd-av mint leaf"></span>
+            <span class="sd-av white drop"></span>
+          </div>
+      </aside>
+      <form id="loginForm" class="box" novalidate>
+        <h1>Log in</h1>
+        <div id="msg" class="msg"></div>
+        <label>Email</label>
+        <input name="email" />
+        <label>Password</label>
+        <input name="password" type="password" />
+        <button class="btn">Log in</button>
+        <p>
+          No account?
+          <a href="register.html">Register</a>
+        </p>
+      </form>
+    </main>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

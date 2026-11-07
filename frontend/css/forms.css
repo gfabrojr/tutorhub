@@ -1,0 +1,94 @@
+form.box {
+  background: #fff;
+  max-width: 440px;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #dde3ea;
+}
+label {
+  display: block;
+  margin: 0.7rem 0 0.2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.55rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font: inherit;
+  background: #fff;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--dark);
+}
+form .btn {
+  margin-top: 1rem;
+  width: 100%;
+}
+.msg {
+  padding: 0.6rem;
+  border-radius: 6px;
+  margin: 0.8rem 0;
+}
+.msg:empty {
+  display: none;
+}
+.msg.ok {
+  background: #d4f1e0;
+  color: #1b6b3d;
+}
+.msg.err {
+  background: #fbdcdc;
+  color: #a02828;
+}
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+.filters input,
+.filters select {
+  width: auto;
+  flex: 1;
+  min-width: 150px;
+}
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+label.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+label.check input {
+  width: auto;
+  margin: 0;
+}
+.sd-hint {
+  margin: 0.4rem 0 0;
+  font-size: 0.85rem;
+  color: #5b6b7c;
+}
+.sd-hint:empty {
+  display: none;
+}

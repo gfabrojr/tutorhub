@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Appointments | TutorHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="stylesheet" href="css/student.css" />
+  </head>
+  <body>
+    <script src="js/theme.js"></script>
+    <nav id="nav"></nav>
+    <main class="wrap">
+      <header class="pagehead">
+        <h1 id="pageTitle">Appointments</h1>
+        <p id="rule"></p>
+      </header>
+      <div id="msg" class="msg"></div>
+      <div class="filters">
+        <select id="fStatus">
+          <option value="">All statuses</option>
+          <option>Pending</option>
+          <option>Approved</option>
+          <option>Rejected</option>
+          <option>Completed</option>
+          <option>Cancelled</option>
+        </select>
+        <input type="date" id="fDate" />
+        <input id="fSearch" placeholder="Search tutor or student" />
+      </div>
+      <div class="tablebox">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Student</th>
+              <th>Tutor</th>
+              <th>Subject</th>
+              <th>Mode</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="apptBody"></tbody>
+        </table>
+      </div>
+      <div class="sd-appts" id="apptCards"></div>
+      <dialog id="reschedDlg" class="dlg">
+        <form id="reschedForm" novalidate>
+          <h2>Reschedule appointment</h2>
+          <p id="reschedInfo"></p>
+          <div id="reschedMsg" class="msg"></div>
+          <label>New date</label>
+          <input type="date" name="date" id="rDate" />
+          <label>New start time (1 hour)</label>
+          <select name="time" id="rTime"></select>
+          <p id="rNote" class="sd-hint"></p>
+          <label>Reason (optional)</label>
+          <textarea name="reason" rows="2" maxlength="255"></textarea>
+          <div class="dlg-actions">
+            <button type="button" class="btn light" id="rCancel">Close</button>
+            <button class="btn">Send</button>
+          </div>
+        </form>
+      </dialog>
+    </main>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/appointments.js"></script>
+  </body>
+</html>

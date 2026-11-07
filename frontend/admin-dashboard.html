@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Admin Dashboard | TutorHub</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+  </head>
+  <body data-role="admin">
+    <nav id="nav"></nav>
+    <main class="wrap">
+      <h1 id="welcome"></h1>
+      <div class="actions">
+        <a class="btn" href="tutors.html">Manage tutors</a>
+        <a class="btn light" href="appointments.html">Manage appointments</a>
+      </div>
+      <div class="stats" id="stats"></div>
+      <h2>Status summary</h2>
+      <div class="stats" id="summary"></div>
+      <h2>Recent activity</h2>
+      <div id="upBox"></div>
+      <h2>Registered users</h2>
+      <div class="filters">
+        <input id="userSearch" placeholder="Search by name, email, or role" />
+      </div>
+      <div id="userBox"></div>
+    </main>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

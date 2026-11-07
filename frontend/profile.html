@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Profile | TutorHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="stylesheet" href="css/student.css" />
+  </head>
+  <body>
+    <script src="js/theme.js"></script>
+    <nav id="nav"></nav>
+    <main class="wrap">
+      <header class="pagehead" id="profileHead" hidden>
+        <div class="sd-who">
+          <div class="sd-av yellow leaf" id="pAvatar"></div>
+          <div>
+            <h1 id="pName"></h1>
+            <p>Your TutorHub profile</p>
+          </div>
+        </div>
+      </header>
+      <form id="profileForm" class="box" novalidate>
+        <h1>My profile</h1>
+        <div id="msg" class="msg"></div>
+        <label>Full name</label>
+        <input name="pname" />
+        <label>Email</label>
+        <input name="pemail" readonly />
+        <label>New password (leave blank to keep)</label>
+        <input name="ppass" type="password" />
+        <div id="tutorFields" hidden>
+          <label>Subjects (comma separated)</label>
+          <input name="psubjects" />
+          <label>Hourly rate (₱)</label>
+          <input name="prate" type="number" min="0" />
+          <label>Days you are available</label>
+          <div class="days" id="pdays">
+            <label class="check"><input type="checkbox" value="Mon" /> Mon</label>
+            <label class="check"><input type="checkbox" value="Tue" /> Tue</label>
+            <label class="check"><input type="checkbox" value="Wed" /> Wed</label>
+            <label class="check"><input type="checkbox" value="Thu" /> Thu</label>
+            <label class="check"><input type="checkbox" value="Fri" /> Fri</label>
+            <label class="check"><input type="checkbox" value="Sat" /> Sat</label>
+            <label class="check"><input type="checkbox" value="Sun" /> Sun</label>
+          </div>
+          <div class="two">
+            <div>
+              <label>Start of day</label>
+              <select name="pstart"></select>
+            </div>
+            <div>
+              <label>End of day</label>
+              <select name="pend"></select>
+            </div>
+          </div>
+          <div class="two">
+            <div>
+              <label>Break from</label>
+              <select name="pbreakstart"></select>
+            </div>
+            <div>
+              <label>Break until</label>
+              <select name="pbreakend"></select>
+            </div>
+          </div>
+          <p class="sd-hint">
+            Students can book any start time inside your hours, every 15 minutes, except during your break.
+            Each session is one hour.
+          </p>
+        </div>
+        <button class="btn">Save changes</button>
+      </form>
+    </main>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/tutors.js"></script>
+  </body>
+</html>

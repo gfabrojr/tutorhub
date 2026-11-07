@@ -1,0 +1,20 @@
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.stat {
+  text-align: center;
+  border-top: 4px solid var(--dark);
+}
+.stat b {
+  display: block;
+  font-size: 2rem;
+  color: var(--dark);
+}
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
